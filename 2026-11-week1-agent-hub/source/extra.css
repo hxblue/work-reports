@@ -1,0 +1,380 @@
+      /* ╔══════════════════════════════════════════════════════════════════════╗
+   ║  ZONE X · DECK-SPECIFIC PATTERNS (第一周工作汇报)                      ║
+   ║  只用上面 ZONE A 的 token，延续 Signal 的衬线标题 + 金色单一强调。       ║
+   ╚══════════════════════════════════════════════════════════════════════╝ */
+
+      /* === 中文字体栈：Signal 原有拉丁字体在前，中文用本机字体 === */
+      :root {
+        --f-display: "Source Serif 4", "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+        --f-heading: "Source Serif 4", "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+        --f-body: "DM Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      }
+
+      /* === 修复：Signal 模板为横向翻页把 html/body 锁成 100% 高且 overflow:hidden，
+         编辑运行时改成纵向滚动翻页后只放开了横向，页面滚不动，
+         is-active 永远停在第 1 页，后面各页的 [data-anim] 内容一直透明。=== */
+      html,
+      body {
+        height: auto !important;
+        overflow-y: auto !important;
+        scrollbar-width: none;
+      }
+      html::-webkit-scrollbar,
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* === 中台流转图：来源 | 中台 | Agent 三栏 === */
+      .slide--hub .slide-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--gap-md);
+        min-height: 0;
+      }
+      .hub {
+        display: grid;
+        grid-template-columns: 1fr auto 1.25fr auto 1fr;
+        align-items: center;
+        gap: 1.2vw;
+      }
+      .hub-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1.1vh;
+      }
+      .hub-col-head {
+        font-family: var(--f-mono);
+        font-size: var(--sz-label);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--c-fg-3);
+        margin-bottom: 0.4vh;
+      }
+      .hub-item {
+        border: 1px solid var(--c-border);
+        padding: 1.2vh 1vw;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .hub-item b {
+        display: block;
+        font-family: var(--f-heading);
+        font-weight: 600;
+        font-size: var(--sz-body);
+        color: var(--c-fg);
+      }
+      .hub-item span {
+        font-family: var(--f-body);
+        font-size: var(--sz-caption);
+        color: var(--c-fg-2);
+      }
+      .hub-core {
+        border: 1px solid var(--c-accent);
+        padding: 2.2vh 1.6vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2vh;
+        background: linear-gradient(180deg, rgba(200, 168, 112, 0.08), rgba(200, 168, 112, 0.02));
+      }
+      .hub-core-title {
+        font-family: var(--f-heading);
+        font-size: var(--sz-h3);
+        color: var(--c-fg);
+      }
+      .hub-core-title em { color: var(--c-accent); }
+      .hub-core ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9vh;
+      }
+      .hub-core li {
+        font-family: var(--f-body);
+        font-size: var(--sz-body);
+        color: var(--c-fg-2);
+        padding-left: 1.2em;
+        position: relative;
+      }
+      .hub-core li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--c-accent);
+      }
+      .hub-arrow {
+        font-size: 1.8vw;
+        color: var(--c-accent);
+        opacity: 0.7;
+      }
+      .hub-return {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid var(--c-border);
+        padding-top: 1.6vh;
+      }
+      .hub-return div {
+        padding-right: 1.4vw;
+        font-family: var(--f-body);
+        font-size: var(--sz-caption);
+        color: var(--c-fg-2);
+        line-height: 1.55;
+      }
+      .hub-return b {
+        display: block;
+        font-family: var(--f-heading);
+        font-size: var(--sz-body);
+        font-weight: 600;
+        color: var(--c-fg);
+        margin-bottom: 0.3vh;
+      }
+      .hub-return .ask b { color: var(--c-accent); }
+
+      /* === 能力卡片：2 × 3 网格 === */
+      .slide--grid .slide-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--gap-md);
+        min-height: 0;
+      }
+      .cap-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--c-border);
+        border-left: 1px solid var(--c-border);
+      }
+      .light .cap-grid,
+      .light .cap {
+        border-color: var(--c-border-light);
+      }
+      .cap {
+        border-right: 1px solid var(--c-border);
+        border-bottom: 1px solid var(--c-border);
+        padding: 2.2vh 1.4vw;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8vh;
+      }
+      .cap-num {
+        font-family: var(--f-mono);
+        font-size: var(--sz-label);
+        letter-spacing: 0.12em;
+        color: var(--c-accent);
+      }
+      .light .cap-num { color: #9a7a3e; }
+      .cap-title {
+        font-family: var(--f-heading);
+        font-size: 1.45vw;
+        font-weight: 600;
+        color: var(--c-fg);
+      }
+      .light .cap-title { color: var(--c-fg-light); }
+      .cap-desc {
+        font-family: var(--f-body);
+        font-size: var(--sz-body);
+        line-height: 1.6;
+        color: var(--c-fg-2);
+      }
+      .light .cap-desc { color: var(--c-fg-light-2); }
+      .grid-note {
+        font-family: var(--f-body);
+        font-size: var(--sz-caption);
+        color: var(--c-fg-2);
+      }
+      .light .grid-note { color: var(--c-fg-light-2); }
+
+      /* === 截图框 === */
+      .shot-frame {
+        border: 1px solid var(--c-border-light);
+        box-shadow: 0 1.2vh 3vh rgba(26, 32, 48, 0.18);
+        background: #111;
+      }
+      .shot-frame img {
+        display: block;
+        width: 100%;
+        max-height: min(56vh, 520px);
+        object-fit: cover;
+        object-position: top left;
+      }
+      .mini-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid var(--c-border-light);
+        margin-top: var(--gap-sm);
+      }
+      .mini-stats div {
+        padding: 1.4vh 1vw 0 0;
+      }
+      .mini-stats b {
+        display: block;
+        font-family: var(--f-display);
+        font-size: 2.6vw;
+        font-weight: 600;
+        line-height: 1.05;
+        color: #9a7a3e;
+      }
+      .mini-stats span {
+        font-family: var(--f-body);
+        font-size: var(--sz-caption);
+        color: var(--c-fg-light-2);
+      }
+
+      /* === 风险列表：编号行 === */
+      .risk-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--c-border-light);
+      }
+      .risk-list li {
+        display: grid;
+        grid-template-columns: 3.2em 11em 1fr;
+        align-items: baseline;
+        gap: 1vw;
+        padding: 1.5vh 0;
+        border-bottom: 1px solid var(--c-border-light);
+        font-family: var(--f-body);
+        font-size: var(--sz-body);
+        color: var(--c-fg-light-2);
+        line-height: 1.55;
+      }
+      .risk-list .n {
+        font-family: var(--f-mono);
+        font-size: var(--sz-label);
+        color: #9a7a3e;
+        letter-spacing: 0.1em;
+      }
+      .risk-list b {
+        font-family: var(--f-heading);
+        font-weight: 600;
+        font-size: 1.25vw;
+        color: var(--c-fg-light);
+      }
+
+      /* === 结论条 === */
+      .verdict {
+        margin-top: var(--gap-md);
+        border-left: 2px solid var(--c-accent);
+        padding: 0.4vh 0 0.4vh 1.2vw;
+        font-family: var(--f-heading);
+        font-size: var(--sz-lead);
+        color: var(--c-fg);
+        line-height: 1.5;
+      }
+      .verdict em { color: var(--c-accent); }
+
+      /* === 结尾支持清单 === */
+      .ask-row {
+        display: flex;
+        gap: 2.4vw;
+        margin-top: var(--gap-md);
+        flex-wrap: wrap;
+      }
+      .ask-row span {
+        font-family: var(--f-mono);
+        font-size: var(--sz-caption);
+        letter-spacing: 0.06em;
+        color: var(--c-fg-2);
+        border-top: 1px solid var(--c-accent);
+        padding-top: 1vh;
+        min-width: 12vw;
+      }
+
+      .vt-hl em { color: var(--c-accent); }
+
+      /* === 全部用米白底：给原本只有深色版的组件补浅色样式 === */
+      /* 小号金色字在米白底上太淡，换深一点的金色；大标题里的金色斜体保持原色 */
+      .light .kicker,
+      .light .chapter-num,
+      .light .compare-label.after,
+      .light .hub-col-head[style],
+      .light .cap-num,
+      .light .risk-list .n {
+        color: #9a7a3e !important;
+      }
+      .light .display,
+      .light .h1,
+      .light .h2,
+      .light .h3,
+      .light .vt-title {
+        color: var(--c-fg-light);
+      }
+      .light .compare-label { color: var(--c-fg-light-2); }
+      /* 大标题里的金色斜体在米白底上偏淡，统一加深 */
+      .light .display em,
+      .light .h1 em,
+      .light .h2 em,
+      .light .h3 em,
+      .light .lead em,
+      .light .vt-hl em {
+        color: #a8823f;
+      }
+
+      /* 底部翻页圆点和顶部进度条：原来按深色底配色，在米白底上看不清 */
+      .nav-dots button {
+        background: rgba(26, 32, 48, 0.18) !important;
+      }
+      .nav-dots button.active {
+        background: #9a7a3e !important;
+      }
+      #progressBar {
+        background: #9a7a3e !important;
+      }
+
+      /* 中台流转图 */
+      .light .hub-col-head { color: var(--c-fg-light-3); }
+      .light .hub-item {
+        border-color: var(--c-border-light);
+        background: #f7f4ee;
+      }
+      .light .hub-item b { color: var(--c-fg-light); }
+      .light .hub-item span { color: var(--c-fg-light-2); }
+      .light .hub-core {
+        background: linear-gradient(180deg, rgba(200, 168, 112, 0.16), rgba(200, 168, 112, 0.05));
+      }
+      .light .hub-core-title { color: var(--c-fg-light); }
+      .light .hub-core-title em { color: #9a7a3e; }
+      .light .hub-core li { color: var(--c-fg-light-2); }
+      .light .hub-arrow { color: #9a7a3e; }
+      .light .hub-return { border-color: var(--c-border-light); }
+      .light .hub-return div { color: var(--c-fg-light-2); }
+      .light .hub-return b { color: var(--c-fg-light); }
+      .light .hub-return .ask b { color: #9a7a3e; }
+
+      /* 结论条、结尾支持清单 */
+      .light .verdict { color: var(--c-fg-light); }
+      .light .verdict em { color: #9a7a3e; }
+      .light .ask-row span { color: var(--c-fg-light-2); }
+
+      /* 下一步时间线：金色小圆点在米白底上加深 */
+      .light .vt-spine::before { background: #9a7a3e; }
+      .light .vt-body em { color: #9a7a3e; }
+
+      /* 封面、章节、结尾这类大留白页，补一层很淡的网格，保留 Signal 的质感 */
+      .slide.light.slide--cover::before,
+      .slide.light.slide--chapter::before,
+      .slide.light.slide--statement::before,
+      .slide.light.slide--end::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(26, 32, 48, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(26, 32, 48, 0.045) 1px, transparent 1px);
+        background-size: 80px 80px;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .slide.light.slide--cover > :not(.slide-edit-layer),
+      .slide.light.slide--chapter > :not(.slide-edit-layer),
+      .slide.light.slide--statement > :not(.slide-edit-layer),
+      .slide.light.slide--end > :not(.slide-edit-layer) {
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (max-height: 600px) {
+        .hub-item { padding: 0.8vh 0.8vw; }
+        .cap { padding: 1.4vh 1vw; }
+        .risk-list li { padding: 1vh 0; }
+      }

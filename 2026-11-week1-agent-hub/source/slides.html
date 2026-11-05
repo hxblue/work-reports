@@ -1,0 +1,373 @@
+<!-- 01 封面 -->
+<section class="slide light slide--cover">
+  <div class="cover-body">
+    <div class="label muted" data-anim="fade-in" data-delay="0" data-s>第一周 · 工作汇报 · FDE</div>
+    <div class="rule" data-anim="reveal-right" data-delay="1"></div>
+    <h1 class="display" style="font-size: 7vw" data-anim="fade-up" data-delay="2" data-s>AI Agent 中台<br /><em>调研与原型</em></h1>
+    <p class="lead" style="font-style: italic; font-family: var(--f-heading); max-width: 56%; color: var(--c-fg-light-2)" data-anim="fade-up" data-delay="3" data-s>一周内搭出一个能自己干活、需要时找人拍板的 Agent 中台，并想和您确定接下来的试点方向。</p>
+    <div class="cover-meta" data-anim="fade-in" data-delay="4">
+      <span class="label muted" data-s>汇报人 · [你的名字]</span>
+      <span class="label muted" data-s>2026 年 11 月</span>
+    </div>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 02 一句话结论 -->
+<section class="slide light slide--statement">
+  <div class="slide-chrome">
+    <span class="label muted" data-anim="fade-in" data-delay="0" data-s>结论先行</span>
+    <span class="label muted" data-anim="fade-in" data-delay="0">{{P}}</span>
+  </div>
+  <div class="slide-body">
+    <div class="statement-body">
+      <div class="kicker" data-anim="fade-in" data-delay="1" data-s>一句话</div>
+      <div class="rule" data-anim="reveal-right" data-delay="2"></div>
+      <h1 class="h1" style="max-width: 78%; font-size: 3.8vw; line-height: 1.25" data-anim="fade-up" data-delay="3" data-s>基于开源项目搭了一个 Agent 中台原型，已经<em>连续运行</em>；它能接入企业微信，下一步想先挑 1 到 2 个业务场景试点。</h1>
+    </div>
+  </div>
+  <div class="slide-foot">
+    <span class="label muted"></span>
+    <span class="label muted">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 03 这一周做了什么 -->
+<section class="slide light slide--diagram">
+  <header class="slide-chrome">
+    <span class="label" style="color: var(--c-fg-light-2)" data-s>01 · 这一周做了什么</span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}}</span>
+  </header>
+  <div class="slide-body">
+    <h2 class="h2" data-anim="fade-up" data-delay="0" data-s>从调研到<em>能跑起来的原型</em></h2>
+    <div class="flow" data-anim="fade-up" data-delay="1">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <div class="flow-title" data-s>调研</div>
+        <div class="flow-desc" data-s>本地与云端 Agent 的区别、企业落地的难点，看了腾讯云 ADP、OpenClaw 等方案。</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <div class="flow-title" data-s>选型</div>
+        <div class="flow-desc" data-s>选开源项目 agent-autoloop 做底座（MIT 许可，可商用），不从零开发。</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <div class="flow-title" data-s>搭建</div>
+        <div class="flow-desc" data-s>接上定时巡检和异常排查，打通通知和“发卡片让人拍板”。</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <div class="flow-title" data-s>可视化</div>
+        <div class="flow-desc" data-s>自己开发网页工作台，一个页面看全局。</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-num">05</div>
+        <div class="flow-title" data-s>验证</div>
+        <div class="flow-desc" data-s>连续运行 7 天，300 多轮任务，模型费用约 2 美元。</div>
+      </div>
+    </div>
+  </div>
+  <footer class="slide-foot">
+    <span class="label" style="color: var(--c-fg-light-2)" data-s>第一周工作汇报</span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}} / {{N}}</span>
+  </footer>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 04 我对 AI 提效的理解 -->
+<section class="slide light slide--list">
+  <div class="slide-chrome">
+    <span class="label" style="color: var(--c-fg-light-2)" data-s>02 · 我的理解</span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}}</span>
+  </div>
+  <div class="slide-body">
+    <div class="list-head" data-anim="fade-up" data-delay="1">
+      <div class="kicker" style="color: #9a7a3e" data-s>AI 提效</div>
+      <h2 class="h2" data-s>做 Agent 提效，我认为要抓住<em>四件事</em></h2>
+      <p class="body" style="color: var(--c-fg-light-2)" data-s>这些也是我选型和设计中台时的判断依据。</p>
+    </div>
+    <ul class="bullet-list" data-anim="fade-up" data-delay="2">
+      <li><span data-s><b>薄中台，厚一线。</b>中台只管调度、权限和记录；效果来自一线把自己的流程交给 Agent。</span></li>
+      <li><span data-s><b>数据最重要。</b>给 Agent 用的资料要有来源、有时间、有负责人，否则它会照着过期的规则办事。</span></li>
+      <li><span data-s><b>人更重要了。</b>能流程化的交给 Agent，人负责判断、拍板和沟通，所以关键节点要方便人介入。</span></li>
+      <li><span data-s><b>企业要的不是演示。</b>要可控、可测、可审计、可运维、可复用、可集成，缺一项就难进真实业务。</span></li>
+    </ul>
+  </div>
+  <div class="slide-foot">
+    <span class="label" style="color: var(--c-fg-light-2)"></span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 05 章节：中台是什么 -->
+<section class="slide light slide--chapter">
+  <div class="chapter-num" data-anim="fade-in" data-delay="0" data-s>03 · 中台是什么</div>
+  <div class="chapter-rule" data-anim="reveal-right" data-delay="1"></div>
+  <h1 class="h1" style="max-width: 70%; margin-bottom: var(--gap-md)" data-anim="fade-up" data-delay="2" data-s>业务里发生的事，按规则<em>交给 Agent</em></h1>
+  <p class="lead muted" style="max-width: 56%" data-anim="fade-up" data-delay="3" data-s>Agent 能自己办完就办完；遇到删数据、重启服务、花钱、对外发消息，先停下来问负责人，选完再接着做。</p>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 06 中台怎么转 -->
+<section class="slide light slide--hub">
+  <div class="slide-chrome">
+    <span class="label muted" data-s>03 · 怎么转起来</span>
+    <span class="label muted">{{P}}</span>
+  </div>
+  <div class="slide-body">
+    <h2 class="h2" data-anim="fade-up" data-delay="0" data-s>一件事从发生到<em>办完</em></h2>
+    <div class="hub" data-anim="fade-up" data-delay="1">
+      <div class="hub-col">
+        <div class="hub-col-head" data-s>业务里发生的事</div>
+        <div class="hub-item"><b data-s>定时任务</b><span data-s>巡检、日报、周报汇总</span></div>
+        <div class="hub-item"><b data-s>系统报警 / 报错</b><span data-s>网站、接口、后台服务</span></div>
+        <div class="hub-item"><b data-s>工单、反馈、代码</b><span data-s>通过 HTTP / Webhook 接入</span></div>
+      </div>
+      <div class="hub-arrow">→</div>
+      <div class="hub-core">
+        <div class="hub-col-head" style="color: var(--c-accent)" data-s>中台</div>
+        <div class="hub-core-title" data-s>规则<em>说了算</em></div>
+        <ul>
+          <li data-s>什么事、交给谁、在哪干、能做到哪一步</li>
+          <li data-s>每一轮都有记录，可追溯、可复盘</li>
+          <li data-s>危险操作必须先问人</li>
+        </ul>
+      </div>
+      <div class="hub-arrow">→</div>
+      <div class="hub-col">
+        <div class="hub-col-head" data-s>Agent 去处理</div>
+        <div class="hub-item"><b data-s>检查脚本</b><span data-s>不调大模型，没事不花钱</span></div>
+        <div class="hub-item"><b data-s>排查 / 整理 Agent</b><span data-s>查原因、写结论、出摘要</span></div>
+        <div class="hub-item"><b data-s>可换的大模型</b><span data-s>Claude、Codex、DeepSeek 等</span></div>
+      </div>
+    </div>
+    <div class="hub-return" data-anim="fade-up" data-delay="2">
+      <div><b data-s>能自己办完</b><span data-s>直接结束，留下记录</span></div>
+      <div class="ask"><b data-s>需要人拍板</b><span data-s>Agent 先停下，不占资源、不花钱</span></div>
+      <div><b data-s>企业微信通知</b><span data-s>负责人点链接做选择</span></div>
+      <div><b data-s>接着干完</b><span data-s>接上原来的进度</span></div>
+    </div>
+  </div>
+  <div class="slide-foot">
+    <span class="label muted"></span>
+    <span class="label muted">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 07 原型在跑：工作台截图 -->
+<section class="slide light slide--split">
+  <div class="slide-chrome">
+    <span class="label" style="color: var(--c-fg-light-2)" data-s>03 · 原型运行情况</span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}}</span>
+  </div>
+  <div class="slide-body" style="grid-template-columns: 1fr 1.45fr">
+    <div class="split-text" data-anim="fade-up" data-delay="1">
+      <div class="kicker" style="color: #9a7a3e" data-s>已在运行</div>
+      <h2 class="h2" data-s>不是演示，<em>已经在干活</em></h2>
+      <p class="lead" style="color: var(--c-fg-light-2)" data-s>原型接在我自己部署的几个项目上，期间真实发现过服务暂时不可访问，自动通知，恢复后自动更新。</p>
+      <div class="mini-stats">
+        <div><b data-s>300+</b><span data-s>最近 7 天任务轮数</span></div>
+        <div><b data-s>$2</b><span data-s>7 天模型费用</span></div>
+        <div><b data-s>5 分钟</b><span data-s>发现异常的间隔</span></div>
+      </div>
+    </div>
+    <div class="split-image" data-anim="fade-in" data-delay="2">
+      <div class="shot-frame"><img src="{{IMG:overview.png}}" alt="网页工作台总览" data-edit-slot-image /></div>
+      <p class="img-caption" style="color: var(--c-fg-light-3)" data-s>网页工作台 · 总览页（项目名已隐去）</p>
+    </div>
+  </div>
+  <div class="slide-foot">
+    <span class="label" style="color: var(--c-fg-light-2)"></span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 08 企业级要求 -->
+<section class="slide light slide--grid">
+  <div class="slide-chrome">
+    <span class="label muted" data-s>03 · 企业级要求</span>
+    <span class="label muted">{{P}}</span>
+  </div>
+  <div class="slide-body">
+    <h2 class="h2" data-anim="fade-up" data-delay="0" data-s>它怎么满足<em>企业级</em>要求</h2>
+    <div class="cap-grid" data-anim="fade-up" data-delay="1">
+      <div class="cap"><div class="cap-num">01</div><div class="cap-title" data-s>可控</div><div class="cap-desc" data-s>用什么模型、在哪干、有什么权限只由规则决定，Agent 改不了；危险操作必须人工确认，随时能停。</div></div>
+      <div class="cap"><div class="cap-num">02</div><div class="cap-title" data-s>可审计</div><div class="cap-desc" data-s>记录只增不改，每一轮为什么触发、谁处理、结果是什么都能查到。</div></div>
+      <div class="cap"><div class="cap-num">03</div><div class="cap-title" data-s>可运维</div><div class="cap-desc" data-s>网页工作台看全局；规则写错时自动沿用旧规则并提示，不会把系统搞停。</div></div>
+      <div class="cap"><div class="cap-num">04</div><div class="cap-title" data-s>防注入、防失控</div><div class="cap-desc" data-s>工单、报错等外部文字只当资料不当指令；Agent 互相触发超过 8 层自动熔断。</div></div>
+      <div class="cap"><div class="cap-num">05</div><div class="cap-title" data-s>可集成</div><div class="cap-desc" data-s>大模型可换；业务系统用 HTTP 或 Webhook 接入；通知支持企业微信、钉钉、飞书。</div></div>
+      <div class="cap"><div class="cap-num">06</div><div class="cap-title" data-s>省钱</div><div class="cap-desc" data-s>等人回复时 Agent 不运行；巡检用普通脚本，只有真出问题才调用大模型。</div></div>
+    </div>
+  </div>
+  <div class="slide-foot">
+    <span class="label muted"></span>
+    <span class="label muted">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 09 可以怎么接入公司业务 -->
+<section class="slide light slide--grid">
+  <div class="slide-chrome">
+    <span class="label" style="color: var(--c-fg-light-2)" data-s>04 · 接入公司业务</span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}}</span>
+  </div>
+  <div class="slide-body">
+    <h2 class="h2" data-anim="fade-up" data-delay="0" data-s>中台已具备的能力，<em>可以这样用</em></h2>
+    <div class="cap-grid" data-anim="fade-up" data-delay="1">
+      <div class="cap"><div class="cap-num">01</div><div class="cap-title" data-s>定时巡检</div><div class="cap-desc" data-s>定时检查官网、后台、接口，出问题先让 Agent 查原因，再通知负责人。</div></div>
+      <div class="cap"><div class="cap-num">02</div><div class="cap-title" data-s>报错初步排查</div><div class="cap-desc" data-s>系统报错自动交给 Agent，对照代码和日志给出初步结论。</div></div>
+      <div class="cap"><div class="cap-num">03</div><div class="cap-title" data-s>定时整理汇总</div><div class="cap-desc" data-s>定时汇总日报、周报、表格数据，生成摘要发给相关的人。</div></div>
+      <div class="cap"><div class="cap-num">04</div><div class="cap-title" data-s>工单 / 反馈跟进</div><div class="cap-desc" data-s>新工单进来先分类、查资料、准备回复，需要决定时找人确认。</div></div>
+      <div class="cap"><div class="cap-num">05</div><div class="cap-title" data-s>代码交付流水线</div><div class="cap-desc" data-s>合并前自动审查、等测试、合并、等发布、核对线上版本（现成流程基于 GitHub）。</div></div>
+      <div class="cap"><div class="cap-num">06</div><div class="cap-title" data-s>企业微信通知与确认</div><div class="cap-desc" data-s>需要人拍板时发企业微信消息，负责人点链接选择，不用学新工具。</div></div>
+    </div>
+    <p class="grid-note" data-anim="fade-in" data-delay="2" data-s>具体接哪个、怎么接，需要和您及业务同事聊过之后再定。</p>
+  </div>
+  <div class="slide-foot">
+    <span class="label" style="color: var(--c-fg-light-2)"></span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 10 企业微信：现在 vs 下一步 -->
+<section class="slide light slide--compare">
+  <div class="slide-chrome">
+    <span class="label muted" data-s>04 · 企业微信怎么接</span>
+    <span class="label muted">{{P}}</span>
+  </div>
+  <div class="slide-body">
+    <div class="compare-panel left" data-anim="fade-up" data-delay="1">
+      <div class="compare-label" data-s>现在就能用</div>
+      <h3 class="h3" data-s>企业微信群机器人</h3>
+      <p class="lead" style="color: var(--c-fg-light-2)" data-s>中台自带这个通道，配置一个群机器人地址就能发消息。</p>
+      <ul class="bullet-list" style="font-size: var(--sz-body)">
+        <li data-s>只能发文字和链接</li>
+        <li data-s>负责人点链接，在网页上做选择</li>
+        <li data-s>开源项目只在模拟环境验证过，还没在真实企业微信上试</li>
+      </ul>
+    </div>
+    <div class="compare-panel right" data-anim="fade-up" data-delay="2">
+      <div class="compare-label after" data-s>需要时再做</div>
+      <h3 class="h3" data-s>企业微信<em>自建应用</em></h3>
+      <p class="lead" style="color: var(--c-fg-light-2)" data-s>想在企业微信里直接点按钮确认，就建一个自建应用，再开发一个通道插件。</p>
+      <ul class="bullet-list" style="font-size: var(--sz-body)">
+        <li data-s>消息里直接点按钮，体验和审批类似</li>
+        <li data-s>中台支持这种扩展，不用改中台本身</li>
+        <li data-s>需要企业微信管理员开通应用权限</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-foot">
+    <span class="label muted"></span>
+    <span class="label muted">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 11 风险和需要的条件 -->
+<section class="slide light slide--stats">
+  <div class="slide-chrome">
+    <span class="label" style="color: var(--c-fg-light-2)" data-s>05 · 风险和条件</span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}}</span>
+  </div>
+  <div class="slide-body">
+    <h2 class="h2" data-anim="fade-up" data-delay="0" data-s>要正式用起来，需要先想清楚<em>这些</em></h2>
+    <ul class="risk-list" data-anim="fade-up" data-delay="1">
+      <li><span class="n">01</span><b data-s>数据集中的安全风险</b><span data-s>中台汇集各系统的事件和记录，本身是敏感点。控制访问、保管好密钥，Agent 默认只读，按需逐项放开。</span></li>
+      <li><span class="n">02</span><b data-s>要放到服务器上</b><span data-s>现在跑在我的电脑上，关机就停。正式使用需要一台公司服务器 7×24 小时运行。</span></li>
+      <li><span class="n">03</span><b data-s>用公司的 API Key</b><span data-s>现在用的是个人账号。用于公司业务应使用 API Key，需要一笔模型预算；巡检类任务费用很低。</span></li>
+      <li><span class="n">04</span><b data-s>复杂长任务仍不可靠</b><span data-s>步骤很多的任务大模型仍可能跑偏，先从边界清楚、能人工兜底的场景开始。</span></li>
+      <li><span class="n">05</span><b data-s>业务数据要先理清</b><span data-s>给 Agent 的资料要有来源、时间和负责人，需要业务同事配合。</span></li>
+    </ul>
+  </div>
+  <div class="slide-foot">
+    <span class="label" style="color: var(--c-fg-light-2)"></span>
+    <span class="label" style="color: var(--c-fg-light-2)">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 12 我适合做什么 -->
+<section class="slide light slide--compare">
+  <div class="slide-chrome">
+    <span class="label muted" data-s>06 · 我适合做什么</span>
+    <span class="label muted">{{P}}</span>
+  </div>
+  <div class="slide-body" style="grid-template-rows: 1fr auto">
+    <div class="compare-panel left" data-anim="fade-up" data-delay="1">
+      <div class="compare-label after" data-s>优点</div>
+      <ul class="bullet-list" style="font-size: var(--sz-body)">
+        <li data-s>关注面广，主动了解 AI 各个方向、各家大模型的表现和行业动态。</li>
+        <li data-s>有部署上线经验：在前公司部署到火山引擎，平时把项目部署在阿里云和 Vercel 上。</li>
+        <li data-s>动手快，能很快把开源项目用起来、接到实际场景里，这次一周内做出了能用的原型。</li>
+      </ul>
+    </div>
+    <div class="compare-panel right" data-anim="fade-up" data-delay="2">
+      <div class="compare-label" data-s>不足与应对</div>
+      <ul class="bullet-list" style="font-size: var(--sz-body)">
+        <li data-s>对单项技术的底层原理钻研不深，更关注它能做什么、效果怎么样。</li>
+        <li data-s>应对：优先选成熟的开源方案，不自己造底层。</li>
+        <li data-s>需要深挖时，向有经验的同事请教，或单独留时间研究。</li>
+      </ul>
+    </div>
+    <div class="verdict" style="grid-column: 1 / -1" data-anim="fade-up" data-delay="3" data-s>所以我适合做 FDE：<em>贴近业务</em>，找到能用 AI 提效的环节，选合适的现成工具接进去，部署上线并持续跟进效果。</div>
+  </div>
+  <div class="slide-foot">
+    <span class="label muted"></span>
+    <span class="label muted">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 13 下一步 -->
+<section class="slide light slide--vtimeline">
+  <div class="slide-chrome">
+    <span class="label muted" data-s>07 · 下一步</span>
+    <span class="label muted">{{P}}</span>
+  </div>
+  <h2 class="vt-hl" data-anim="fade-up" data-delay="1" data-s>先小范围试点，<em>跑稳了再放开</em></h2>
+  <div class="vtimeline" data-anim="fade-up" data-delay="2">
+    <div class="vt-date" data-s>第 1 步</div>
+    <div class="vt-spine"></div>
+    <div class="vt-content"><div class="vt-title" data-s>和您确定试点场景</div><p class="vt-body" data-s>从能力清单里挑 1 到 2 个，或您指一个业务上最费人力的环节。</p></div>
+    <div class="vt-date" data-s>第 2 步</div>
+    <div class="vt-spine"></div>
+    <div class="vt-content"><div class="vt-title" data-s>了解业务流程</div><p class="vt-body" data-s>弄清现在怎么做、哪里最耗时、哪些步骤必须<em>有人确认</em>。</p></div>
+    <div class="vt-date" data-s>第 3 步</div>
+    <div class="vt-spine"></div>
+    <div class="vt-content"><div class="vt-title" data-s>准备运行条件</div><p class="vt-body" data-s>一台服务器、企业微信机器人或自建应用权限、大模型 API 预算。</p></div>
+    <div class="vt-date" data-s>第 4 步</div>
+    <div class="vt-spine"></div>
+    <div class="vt-content"><div class="vt-title" data-s>小范围试运行</div><p class="vt-body" data-s>先只读、只通知，确认效果后再逐步放开权限。</p></div>
+  </div>
+  <div class="slide-foot">
+    <span class="label muted"></span>
+    <span class="label muted">{{P}} / {{N}}</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
+
+<!-- 14 结尾：需要的支持 -->
+<section class="slide light slide--end">
+  <div class="kicker" data-anim="fade-in" data-delay="0" data-s>需要您的支持</div>
+  <div class="rule" data-anim="reveal-right" data-delay="1"></div>
+  <h1 class="h1" style="max-width: 66%" data-anim="fade-up" data-delay="2" data-s>先定一个场景，<em>小范围</em>跑起来。</h1>
+  <div class="ask-row" data-anim="fade-up" data-delay="3">
+    <span data-s>试点场景</span>
+    <span data-s>一台服务器</span>
+    <span data-s>企业微信权限</span>
+    <span data-s>大模型 API 预算</span>
+  </div>
+  <div class="slide-edit-layer" aria-hidden="true"></div>
+</section>
