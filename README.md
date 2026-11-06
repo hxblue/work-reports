@@ -9,6 +9,7 @@
 | 日期 | 主题 | 在线查看 | 文件 |
 |---|---|---|---|
 | 2026-11 | 第一周工作汇报：AI Agent 中台调研与原型 | [打开](https://hxblue.github.io/work-reports/2026-11-week1-agent-hub/) | [index.html](2026-11-week1-agent-hub/index.html) |
+| 2026-11 | 第一周工作汇报（瑞士风格 9 页精简版） | [打开](https://hxblue.github.io/work-reports/2026-11-week1-agent-hub-swiss/) | [index.html](2026-11-week1-agent-hub-swiss/index.html) |
 
 ## 怎么看、怎么编辑
 
